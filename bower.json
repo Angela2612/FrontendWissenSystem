@@ -2,13 +2,14 @@
   "name": "frontend-wissen-system",
   "version": "0.0.0",
   "dependencies": {
-    "angular": "1.2.6",
+    "angular": "1.2.9",
     "json3": "~3.2.6",
     "es5-shim": "~2.1.0",
-    "jquery": "~1.10.2",
-    "bootstrap": "~3.0.3",
-    "angular-cookies": "1.2.6",
-    "angular-sanitize": "1.2.6",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-cookies": "1.2.9",
+    "angular-sanitize": "1.2.9",
+    "angular-animate": "~1.2.9",
     "angular-bootstrap": "~0.11.0",
     "angular-ui-router": "~0.2.10",
     "restangular": "~1.4.0",
@@ -17,10 +18,10 @@
     "angular-ui-select2": "~0.0.5",
     "angular-loading-bar": "~0.4.1",
     "ng-ckeditor": "~0.2.1",
-    "ckeditor": "~4.4.0"
+    "ckeditor": "4.4.0"
   },
   "devDependencies": {
-    "angular-mocks": "1.2.6",
-    "angular-scenario": "1.2.6"
+    "angular-mocks": "1.2.9",
+    "angular-scenario": "1.2.9"
   }
 }

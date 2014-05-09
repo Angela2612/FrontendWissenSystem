@@ -1,0 +1,6 @@
+#breadcrumb
+	span(ng-repeat="crumb in breadcrumbs")
+		a.tip-bottom(data-original-title="{{crumb.displayName}}" ui-sref="{{ crumb.route }}" ng-if="!$last")
+			i(class="{{crumb.icon_fa}}")
+			| {{ crumb.displayName }}
+		a.current(ng-show="$last" class="{{crumb.icon_fa}}").  {{ crumb.displayName }}

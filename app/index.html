@@ -31,7 +31,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ui-view="principal" id="wrapper"></div>
+    <div ui-view="principal"></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -51,10 +51,12 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/lodash/dist/lodash.compat.js"></script>
@@ -70,12 +72,18 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/uiBreadcrumbs.js"></script>
+        <script src="scripts/unicorn.js"></script>
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/main/MainCtrl.js"></script>
         <script src="scripts/login/LoginCtrl.js"></script>
         <script src="scripts/login/LoginConfig.js"></script>
-        <script src="scripts/services/myApp.js"></script>
-        <script src="scripts/services/myServicio.js"></script>
+        <script src="scripts/panel/PanelCtrl.js"></script>
+        <script src="scripts/panel/PanelConfig.js"></script>
+        <script src="scripts/panel/PanelHeaderCtrl.js"></script>
+        <script src="scripts/preguntas/PreguntasCtrl.js"></script>
+        <script src="scripts/preguntas/PreguntasConfig.js"></script>
+        <script src="scripts/usuarios/UsuariosCtrl.js"></script>
         <!-- endbuild -->
 </body>
 </html>
