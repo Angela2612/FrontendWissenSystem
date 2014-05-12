@@ -3,7 +3,7 @@
 		h1
 			a.
 				Wissen System
-		a#menu-trigger
+		a#menu-trigger(href="" ng-click="open_menu()")
 			i.fa.fa-bars
 
 	#user-nav
@@ -37,7 +37,7 @@
 					i.fa.fa-cog
 					span.text Settings
 			li.btn
-				a
+				a(ui-sref="login")
 					i.fa.fa-share
 					span.text Salir
 

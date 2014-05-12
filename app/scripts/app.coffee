@@ -15,15 +15,30 @@ angular.module('frontendWissenSystemApp', [
 ])
 
 .constant('App', {
-	Origin: 'http://olimpiadas.herokuapp.com/'
+	#Origin: 'http://olimpiadas.herokuapp.com/' # Pruebas en Heroku
+	Origin: 'http://127.0.0.1:8000/' # Pruebas en mi localhost
 	API: 'api/'
 	#Server: "#{App.Origin}#{App.API}" # No puedo hacer esto
-	Server: 'http://olimpiadas.herokuapp.com/api/'
+	#Server: 'http://olimpiadas.herokuapp.com/api/'
+	Server: 'http://127.0.0.1:8000/api/'
 	views: 'views/'
 })
 
-.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$translatePartialLoaderProvider', 'App', 'RestangularProvider', ($state, $urlRouter, $translate, $translatePartialLoader, App, Restangular)->
+.config(['$stateProvider', '$urlRouterProvider', '$translateProvider', '$translatePartialLoaderProvider', '$httpProvider', 'App', 'RestangularProvider', ($state, $urlRouter, $translate, $translatePartialLoader, $httpProvider, App, Restangular)->
 	
+	$httpProvider.defaults.withCredentials = true;
+	
+	###
+	$httpProvider.defaults.headers.post['X-CSRFToken'] = $cookies.csrftoken;
+	$httpProvider.defaults.headers.put['X-CSRFToken'] = $cookies.csrftoken;
+	$httpProvider.defaults.headers['delete']['X-CSRFToken'] = $cookies.csrftoken;
+	###
+
+	$httpProvider.defaults.xsrfCookieName = 'csrftoken';
+	$httpProvider.defaults.xsrfHeaderName = 'X-CSRFToken';
+
+
+
 	Restangular.setBaseUrl App.Server
 
 	$urlRouter
@@ -66,6 +81,8 @@ angular.module('frontendWissenSystemApp', [
 	])
 .run ['$rootScope', '$state', '$stateParams', '$translate', ($rootScope, $state, $stateParams, $translate) ->
 	
+
+
 	$rootScope.$state = $state
 	$rootScope.$stateParams = $stateParams;
 

@@ -117,6 +117,7 @@ a.blue {
   top: 0;
   left: 0;
 }
+/*
 #loginbox form#loginform {
   z-index: 200;
 }
@@ -125,14 +126,18 @@ a.blue {
   opacity: 0;
   display: none;
 }
-#loginbox form#recoverform .control-group {
-  margin: 23px 0;
-}
 #loginbox form#registerform {
   z-index: 100;
   opacity: 0;
   display: none;
 }
+*/
+
+
+#loginbox form#recoverform .control-group {
+  margin: 23px 0;
+}
+
 #loginbox p {
   margin-top: 15px;
   padding: 0 20px;
@@ -167,7 +172,7 @@ a.blue {
   font-weight: bold;
   color: #555555;
   padding: 12px 20px;
-}
+}/*
 .btn-inverse {
   color: #ffffff;
   background-color: #555555;
@@ -181,7 +186,7 @@ a.blue {
   color: #ffffff;
   background-color: #414141;
   border-color: #2a2a2a;
-}
+}*/
 .btn-inverse:active,
 .btn-inverse.active,
 .open .dropdown-toggle.btn-inverse {
@@ -210,12 +215,24 @@ fieldset[disabled] .btn-inverse.active {
   font-size: 20px;
   border-left: 1px solid #e6e6e6;
   color: #888888;
-  padding: 9px 0 10px;
+  padding: 18px 0 10px;
   margin: 0 0 0 -4px;
   border-radius: 0;
+  background-image: none;
+  margin-left: -1px;
+  border-top: 0px;
+  background-color: transparent;
 }
-.btn-social .btn:hover {
+
+.btn-social .btn:hover,
+.btn-social .btn:focus {
   color: #fff;
+  text-decoration: none;
+  background-position: 0 -50px;
+  -webkit-transition: background-position 0.1s linear;
+     -moz-transition: background-position 0.1s linear;
+       -o-transition: background-position 0.1s linear;
+          transition: background-position 0.1s linear;
 }
 .btn-social .btn.btn-facebook:hover {
   background-color: #428bca;
@@ -232,3 +249,37 @@ fieldset[disabled] .btn-inverse.active {
 hr {
   margin: 8px 0 -5px;
 }
+
+
+
+
+#loginbox.logueando{
+  height: 255px;
+}
+#loginbox.recuperando{
+  height: 183px;
+}
+#loginbox.registrando{
+  height: 280px;
+}
+#loginbox{
+  -webkit-transition: height .5s ease-out;
+     -moz-transition: height .5s ease-out;
+      -ms-transition: height .5s ease-out;
+       -o-transition: height .5s ease-out;
+          transition: height .5s ease-out;
+}
+#loginbox .ng-hide-add, #loginbox .ng-hide-remove {
+  display:block!important;
+}
+#loginbox .ng-hide-add.ng-hide-add-active,
+#loginbox .ng-hide-remove{
+  animation: fadeOutRightBig 1s;
+  -webkit-animation: fadeOutRightBig 1s;
+}
+#loginbox .ng-hide-add,
+#loginbox .ng-hide-remove.ng-hide-remove-active{
+  animation: fadeInLeft 1s;
+  -webkit-animation: fadeInLeft 1s;
+}
+

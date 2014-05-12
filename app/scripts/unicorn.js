@@ -72,8 +72,9 @@ $(function(){
 	if($(window).width() > 767 && $(window).width() < 992) {
 		ul2.css({'display':'none'});
 	}
-
+/*
 	$('#menu-trigger').on('click',function(){
+		alert('presionado!');
 		if($(window).width() <= 767) {
 			if($('body').hasClass('menu-open')) {
 				$('body').removeClass('menu-open');
@@ -83,16 +84,8 @@ $(function(){
 		}
 		return false;
 	});
-
+*/
 	
-
-	// === Tooltips === //
-	$('.tip').tooltip();	
-	$('.tip-left').tooltip({ placement: 'left' });	
-	$('.tip-right').tooltip({ placement: 'right' });	
-	$('.tip-top').tooltip({ placement: 'top' });	
-	$('.tip-bottom').tooltip({ placement: 'bottom' });	
-		
 	// === Style switcher === //
 	$('#style-switcher i').click(function()
 	{

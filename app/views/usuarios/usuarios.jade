@@ -1,2 +1,63 @@
-h2.
-	Usuario
+.row
+	.col-xs-12.col-sm-4
+		.widget-box
+			.widget-title
+				span.icon
+					i.fa.fa-signal
+				h5 Edición
+				.buttons
+					a.btn
+						i.fa
+						span.text Ejemplo
+			.widget-content
+				form.form-horizontal(ng-submit="")
+					.form-group
+						label.col-sm-3.col-md-3.col-lg-2.control-label Usuario
+						.col-sm-9.col-md-9.col-lg-10
+							input.form-control.input-sm(type="text" required)
+					.form-group
+						label.col-sm-3.col-md-3.col-lg-2.control-label Contraseña
+						.col-sm-9.col-md-9.col-lg-10
+							input.form-control.input-sm(type="password" required)
+					.form-group
+						label.col-sm-3.col-md-3.col-lg-2.control-label Confirmar
+						.col-sm-9.col-md-9.col-lg-10
+							input.form-control.input-sm(type="password" required)
+					.form-group
+						label.col-sm-3.col-md-3.col-lg-2.control-label E-mail
+						.col-sm-9.col-md-9.col-lg-10
+							input.form-control.input-sm(type="email")
+					.form-actions
+						input.btn.btn-primary(type="submit" value="Crear usuario")
+
+
+
+	.col-xs-12.col-sm-8
+		.widget-box
+			.widget-title
+				span.icon
+					i.fa.fa-signal
+				h5 Listado
+				.buttons
+					a
+			.widget-content.nopadding
+				table.table.table-bordered.table-striped.table-hover.with-check
+					thead
+						tr
+							th
+								input(type="checkbox" id="title-table-checkbox" name="title-table-checkbox")
+							th Id
+							th Nombre
+							th Apellido
+							th Usuario
+							th Entidad
+					tbody
+						tr(ng-repeat="(key, usu) in usuarios")
+							td
+								input(type="checkbox")
+							td {{ usu.id }}
+							td {{ usu.firstname}}
+							td {{ usu.lastname}}
+							td {{ usu.username}}
+							td {{ usu.entidad}}
+
